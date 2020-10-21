@@ -7,19 +7,24 @@ namespace TestMaximum
     public class GenericMaximum<T> where T:IComparable
     {
         public T[] numberArray;
-        public GenericMaximum(T[] givenNumbers)
+        public GenericMaximum(params T[] givenNumbers)
         {
             this.numberArray = givenNumbers;
         }
-        public T FindMax()
+        public T[] SortArray(params T[] valueArray)
         {
-            Array.Sort(this.numberArray);
-            return this.numberArray[this.numberArray.Length - 1];
+            Array.Sort(valueArray);
+            return valueArray;
+        }
+        public T FindMax(params T[] valueArray)
+        {
+            var sorted_Array = SortArray(valueArray);
+            return sorted_Array[sorted_Array.Length - 1];
         }
 
         public void PrintMaxValue()
         {
-            T maxValue = FindMax();
+            T maxValue = FindMax(this.numberArray);
             Console.WriteLine("Max Value = " + maxValue);
         }
     }
