@@ -15,6 +15,8 @@ namespace TestMaximum
             Console.WriteLine("Maximum integer number: "+ intMax);
             float floatMax = new FindMaximum().FindFloatMax(a, b, c);
             Console.WriteLine("Maximum Float number: " + floatMax);
+            string stringMax = new FindMaximum().FindStringMax("a", "b", "c");
+            Console.WriteLine("Maximum string number: " + stringMax);
         }
     }
 }
