@@ -12,7 +12,7 @@ namespace TestMaximum
             int[] max = new int[3];
             max[0] = a;
             max[1] = b;
-            max[3] = c;
+            max[2] = c;
             Array.Sort(max);
             return max[max.Length - 1];
         }
