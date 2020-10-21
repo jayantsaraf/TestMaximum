@@ -13,6 +13,8 @@ namespace TestMaximum
             int c = int.Parse(Console.ReadLine());
             int intMax = new FindMaximum().FindIntMax(a, b, c);
             Console.WriteLine("Maximum integer number: "+ intMax);
+            float floatMax = new FindMaximum().FindFloatMax(a, b, c);
+            Console.WriteLine("Maximum Float number: " + floatMax);
         }
     }
 }
