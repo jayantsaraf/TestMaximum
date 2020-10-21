@@ -22,5 +22,13 @@ namespace TestMaximumUnitTest
             int expected = 14;
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Find_Maximum_Should_Return_Max_When_Max_Present_At_3rd_Position()
+        {
+            FindMaximum max = new FindMaximum();
+            int actual = max.FindIntMax(13, 14, 15);
+            int expected = 15;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
