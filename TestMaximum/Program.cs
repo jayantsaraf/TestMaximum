@@ -19,15 +19,28 @@ namespace TestMaximum
             //Console.WriteLine("Maximum Float number: " + floatMax);
             //string stringMax = new FindMaximum().FindStringMax("a", "b", "c");
             //Console.WriteLine("Maximum string number: " + stringMax);
+
+            //int[] arrayOfIntegers = new int[] { 10, 12, 13 };
+            //int maxValue = new FindMaximum<int>().GenericMax(arrayOfIntegers);
+            //Console.WriteLine("Maximum integer number: " + maxValue);
+            //double[] arrayOfDouble = new double[] { 10.1, 12.3, 13.4 };
+            //double maxDoubleValue = new FindMaximum<double>().GenericMax(arrayOfDouble);
+            //Console.WriteLine("Maximum double number: " + maxDoubleValue);
+            //string[] arrayOfString = new string[] { "10", "12", "13" };
+            //string maxStringValue = new FindMaximum<string>().GenericMax(arrayOfString);
+            //Console.WriteLine("Maximum string number: " + maxStringValue);
+
             int[] arrayOfIntegers = new int[] { 10, 12, 13 };
-            int maxValue = new FindMaximum<int>().GenericMax(arrayOfIntegers);
-            Console.WriteLine("Maximum integer number: " + maxValue);
-            double[] arrayOfDouble = new double[] { 10.1, 12.3, 13.4 };
-            double maxDoubleValue = new FindMaximum<double>().GenericMax(arrayOfDouble);
-            Console.WriteLine("Maximum double number: " + maxDoubleValue);
+            GenericMaximum<int> integerNumbers = new GenericMaximum<int>(arrayOfIntegers);
+            integerNumbers.PrintMaxValue();
+            double[] arrayOfDouble = new double[] { 10.2, 12.3, 13.4 };
+            GenericMaximum<double> doubleNumbers = new GenericMaximum<double>(arrayOfDouble);
+            doubleNumbers.PrintMaxValue();
             string[] arrayOfString = new string[] { "10", "12", "13" };
-            string maxStringValue = new FindMaximum<string>().GenericMax(arrayOfString);
-            Console.WriteLine("Maximum string number: " + maxStringValue);
+            GenericMaximum<string> stringNumbers = new GenericMaximum<string>(arrayOfString);
+            stringNumbers.PrintMaxValue();
+
+
 
         }
     }
